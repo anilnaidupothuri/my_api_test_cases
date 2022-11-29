@@ -4,6 +4,7 @@ module Api
   module V1
     class UsersController < ApplicationController
       before_action :set_user, only: %i[show update destroy]
+      before_action :check_owner, only: [:update, :destroy]
 
       def index 
         @users = User.all 
@@ -44,6 +45,10 @@ module Api
       def set_user
         @user = User.find(params[:id])
       end
+
+      def check_owner
+         head :forbidden unless @user.id == current_user&.id
+       end
     end
   end
 end
