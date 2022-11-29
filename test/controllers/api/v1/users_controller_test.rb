@@ -2,8 +2,7 @@
 
 require 'test_helper'
 
-module Api
-  module V1
+
     module Api
       module V1
         class UsersControllerTest < ActionDispatch::IntegrationTest
@@ -36,18 +35,31 @@ module Api
 
           test 'should be update user' do
             patch api_v1_user_url(@user), params: { user: { name: 'test1', email: @user.email, location: 'Ap' } },
+                                         headers: {Authorization: JsonWebToken.encode(user_id:@user.id)},
                                           as: :json
             assert_response :success
           end
 
+          test 'should forbid update user' do 
+            patch api_v1_user_url(@user), params: { user: { email:@user.email}}, as: :json
+            assert_response :forbidden
+          end 
+
           test 'shoud be delete user' do
             assert_difference('User.count', -1) do
-              delete api_v1_user_url(@user), as: :json
+              delete api_v1_user_url(@user),headers: {Authorization: JsonWebToken.encode(user_id:@user.id)},
+                                            as: :json
             end
             assert_response :no_content
           end
+
+          test 'should forbid  destroy user' do 
+            assert_no_difference('users.count') do 
+              delete api_v1_user_url(@user), as: :json
+             end 
+             assert_response :forbidden
+           end
         end
       end
     end
-  end
-end
+  

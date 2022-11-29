@@ -4,7 +4,6 @@ module Api
   module V1
     class TokensController < ApplicationController
       def create
-        byebug
         @user = User.find_by_email(params[:email])
         if @user&.authenticate(params[:password_digest])
           render json: {
