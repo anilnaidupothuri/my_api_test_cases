@@ -1,0 +1,17 @@
+current directory: /home/ext02/api/test_cases/my_api_test_cases/vendor/ruby/2.6.0/gems/racc-1.6.0/ext/racc/cparse
+/home/ext02/.rvm/rubies/ruby-2.6.5/bin/ruby -I /home/ext02/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20221129-7347-1s8h5by.rb extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /home/ext02/api/test_cases/my_api_test_cases/vendor/ruby/2.6.0/gems/racc-1.6.0/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /home/ext02/api/test_cases/my_api_test_cases/vendor/ruby/2.6.0/gems/racc-1.6.0/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/ext02/api/test_cases/my_api_test_cases/vendor/ruby/2.6.0/gems/racc-1.6.0/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20221129-7347-15zemp9/racc

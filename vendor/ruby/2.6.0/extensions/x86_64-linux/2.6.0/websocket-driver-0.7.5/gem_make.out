@@ -1,0 +1,15 @@
+current directory: /home/ext02/api/test_cases/my_api_test_cases/vendor/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/home/ext02/.rvm/rubies/ruby-2.6.5/bin/ruby -I /home/ext02/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20221129-7347-1k87jn0.rb extconf.rb
+creating Makefile
+
+current directory: /home/ext02/api/test_cases/my_api_test_cases/vendor/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/ext02/api/test_cases/my_api_test_cases/vendor/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/ext02/api/test_cases/my_api_test_cases/vendor/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20221129-7347-63hgto
