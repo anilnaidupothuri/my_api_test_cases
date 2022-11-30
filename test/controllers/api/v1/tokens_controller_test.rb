@@ -9,7 +9,7 @@ module Api
         @user = users(:one)
       end
       test 'should get jwt token' do
-        post api_v1_tokens_url, params: { user: { email: @user.email, password_digest: 'one123' } }, as: :json
+        post api_v1_tokens_url, params: { user: { email: @user.email, password: "one123" } }, as: :json
         assert_response :success
         json_response = json.parse(response.body)
         assert_not_nil json_response['token']

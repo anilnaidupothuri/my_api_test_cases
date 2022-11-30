@@ -3,6 +3,8 @@
 module Api
   module V1
     class UsersController < ApplicationController
+      include Authenticable
+
       before_action :set_user, only: %i[show update destroy]
       before_action :check_owner, only: %i[update destroy]
 
