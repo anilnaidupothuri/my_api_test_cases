@@ -18,7 +18,7 @@ class AuthenticableTest < ActionDispatch::IntegrationTest
   test 'should get user from Authorization token' do
     @authentication.request.headers['Authorization'] =
       JsonWebToken.encode(user_id: @user.id)
-      assert_not_nil @authentication.current_user 
+    assert_not_nil @authentication.current_user
     assert_equal @user.id, @authentication.current_user.id
   end
   test 'should not get user from empty Authorization token' do
