@@ -8,18 +8,19 @@ module Api
       before_action :check_owner, only: %i[update destroy]
 
       def show
-        render json: @product
+        options = { include: [:user] }
+        render json: ProductSerializer.new(@product, options).serializable_hash
       end
 
       def index
         @products = Product.all
-        render json: @products
+        render json: ProductSerializer.new(@products).serializable_hash
       end
 
       def create
         product = current_user.products.create(product_params)
         if product.save
-          render json: product, status: :created
+          render json: ProductSerializer.new(product).serializable_hash, status: :created
         else
           render json: { errors: product.errors }, status: :unprocessable_entity
         end
@@ -27,7 +28,7 @@ module Api
 
       def update
         if @product.update(product_params)
-          render json: @product
+          render json: ProductSerializer.new(@product).serializable_hash
         else
           render json: @product.errors, status: :unprocessable_entity
         end
