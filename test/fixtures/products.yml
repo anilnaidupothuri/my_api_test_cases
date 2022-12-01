@@ -1,13 +1,25 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  title: My String
   price: 1
   published: false
   user: one
 
 two:
-  title: MyString
+  title: My String 2
   price: 1
   published: false
+  user: two
+
+three:
+  title: first
+  price: 499
+  published: true
+  user: two
+
+four: 
+  title: second
+  price: 459
+  published: true
   user: two
