@@ -34,7 +34,6 @@ class Api::V1::OrdersControllerTest < ActionDispatch::IntegrationTest
 
   test 'should forbid create order or unlogged' do 
     assert_no_difference('Order.count') do 
-   byebug
       post api_v1_orders_url, params: @order_params, as: :json
     end 
     assert_response :forbidden

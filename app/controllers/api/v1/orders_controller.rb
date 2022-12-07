@@ -17,8 +17,7 @@ class Api::V1::OrdersController < ApplicationController
 	end
 
 	def create
-
-	  order  = current_user.orders.build(order_params)
+	  order  = current_user.orders.create(order_params)
 	  if order.save 
 	    render json:order, status: :created
 	    else 
