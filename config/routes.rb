@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users
       resources :products
+      resources :orders
       resources :tokens, only: [:create]
     end
   end
