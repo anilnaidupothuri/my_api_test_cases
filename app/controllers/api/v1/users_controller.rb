@@ -14,8 +14,8 @@ module Api
       end
 
       def show
-        options = { include: [:products] }
-        render json: UserSerializer.new(@user, options).serializable_hash
+        #options = { include: [:products] }
+        render json: UserSerializer.new(@user).serializable_hash
       end
 
       def create
@@ -31,12 +31,13 @@ module Api
         if @user.update(user_params)
           render json: UserSerializer.new(@user).serializable_hash, status: :ok
         else
-          render json: @errors, status: :unprocessable_entity
+          render json: @user.errors, status: :unprocessable_entity
         end
       end
 
       def destroy
         @user.destroy
+        head :no_content
       end
 
       private
