@@ -5,21 +5,25 @@ one:
   price: 1
   published: false
   user: one
+  quantity: 5
 
 two:
   title: My String 2
   price: 1
   published: false
   user: two
+  quantity: 5
 
 three:
   title: first
   price: 499
   published: true
   user: two
+  quantity: 5
 
 four: 
   title: second
   price: 459
   published: true
   user: two
+  quantity: 5
