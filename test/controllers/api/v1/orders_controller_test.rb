@@ -3,8 +3,10 @@ require 'test_helper'
 class Api::V1::OrdersControllerTest < ActionDispatch::IntegrationTest
   setup do 
     @order = orders(:one)
-     @order_params = { order: {product_ids:[products(:one), products(:two)],
-                               total: 50}}                         
+     @order_params = { order: {
+                               product_ids_and_quantities: [{ product_id: products(:one).id, quantity: 2},
+                               {product_id: products(:two).id, quantity: 3},]
+                               }}                         
   end 
 
   test 'should forbid orders from unlogged ' do 
@@ -48,4 +50,15 @@ class Api::V1::OrdersControllerTest < ActionDispatch::IntegrationTest
       end 
       assert_response :success
     end
+
+    test 'should create order with two placements' do 
+      assert_difference('Order.count') do 
+        assert_difference('Placement.count') do 
+          post api_v1_orders_url, params: @order_params,
+                                  headers: { Authorization: JsonWebToken.encode(user_id: @order.user_id)},
+                                  as: :json
+          end 
+        end 
+        assert_response :success
+      end 
 end

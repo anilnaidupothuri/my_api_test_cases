@@ -42,7 +42,7 @@ module Api
       private
 
       def product_params
-        params.require(:product).permit(:title, :price, :published)
+        params.require(:product).permit(:title, :price, :published, :quantity)
       end
 
       def set_params

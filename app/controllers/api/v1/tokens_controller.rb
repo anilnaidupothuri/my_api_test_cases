@@ -11,7 +11,9 @@ module Api
             email: @user.email
           }
         else
-          head :unauthorized
+
+          render json: {errors:"email/password is wrong"}, status: :unprocessable_entity
+          #
         end
       end
     end
