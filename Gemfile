@@ -21,6 +21,7 @@ gem 'jwt', '~> 2.2'
 gem 'faker'
 gem 'hirb'
 gem 'fast_jsonapi'
+gem 'kaminari'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

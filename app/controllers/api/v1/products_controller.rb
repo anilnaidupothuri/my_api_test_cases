@@ -13,7 +13,9 @@ module Api
       end
 
       def index
-        @products = Product.search(params)
+        @products = Product.page(params[:page])
+                           .per(params[:per_page])
+                           .search(params)
         render json: ProductSerializer.new(@products).serializable_hash
       end
 
