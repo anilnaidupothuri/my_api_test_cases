@@ -18,6 +18,7 @@ class Api::V1::OrdersController < ApplicationController
 	def create 
 		order = current_user.orders.build(order_params)
 		  if order.save
+		  	OrderMailer.send_confirmation(order).deliver
 		  	render json: order, status: :ok
 		  else 
 		  	render json: order.errors, status: 422
