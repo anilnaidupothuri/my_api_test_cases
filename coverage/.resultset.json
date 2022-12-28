@@ -1,0 +1,199 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/ext-hyd-lap-055/workspace/tasks/my_api_rspec/app/models/user.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/ext-hyd-lap-055/workspace/tasks/my_api_rspec/app/models/application_record.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/ext-hyd-lap-055/workspace/tasks/my_api_rspec/app/models/product.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          2,
+          2,
+          null,
+          null,
+          2,
+          null,
+          null
+        ]
+      },
+      "/home/ext-hyd-lap-055/workspace/tasks/my_api_rspec/app/controllers/api/v1/products_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/ext-hyd-lap-055/workspace/tasks/my_api_rspec/app/controllers/application_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/ext-hyd-lap-055/workspace/tasks/my_api_rspec/app/controllers/concerns/authenticable.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          3,
+          null,
+          2,
+          2,
+          null,
+          2,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/ext-hyd-lap-055/workspace/tasks/my_api_rspec/app/serializers/product_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/ext-hyd-lap-055/workspace/tasks/my_api_rspec/app/serializers/user_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/ext-hyd-lap-055/workspace/tasks/my_api_rspec/lib/json_web_token.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1672229104
+  }
+}

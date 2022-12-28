@@ -10,12 +10,12 @@ module Api
 
       def index
         @users = User.all
-        render json: UserSerializer.new(@users).serializable_hash
+        render json:UserSerializer.new(@users).serializable_hash#, status:200
       end
 
       def show
         #options = { include: [:products] }
-        render json: UserSerializer.new(@user).serializable_hash
+        render json:@user #UserSerializer.new(@user).serializable_hash
       end
 
       def create

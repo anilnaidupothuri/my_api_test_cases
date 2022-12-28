@@ -9,6 +9,10 @@ require 'rspec/rails'
 def json 
   JSON.parse(response.body)
 end 
+
+require 'simplecov'
+SimpleCov.start
+
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
 end
