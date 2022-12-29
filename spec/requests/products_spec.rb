@@ -59,7 +59,7 @@ RSpec.describe "Products", type: :request do
     end 
 
     it "forbid to update product for another user" do 
-      put "api/v1/products/#{product2.id}", params:{products:{price:2000}},
+      put "/api/v1/products/#{product2.id}", params:{products:{price:2000}},
                                             headers:{Authorization: JsonWebToken.encode(user_id:user2.id)}
 
       expect(response).to have_http_status(403)
@@ -71,6 +71,11 @@ RSpec.describe "Products", type: :request do
       delete "/api/v1/products/#{product2.id}", headers:{Authorization:JsonWebToken.encode(user_id:user1.id)}
       expect(response).to have_http_status(204)
     end
+
+    it "forbid another user to delete products" do 
+      delete "/api/v1/products/#{product2.id}", headers:{Authorization: JsonWebToken.encode(user_id:user2.id)}
+      expect(response).to have_http_status(403)
+    end 
     
   end 
 end
