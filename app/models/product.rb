@@ -9,7 +9,7 @@ class Product < ApplicationRecord
   has_many :orders, through: :placements
 
   scope :filter_by_title, ->(title) { where('lower(title) LIKE ?', "%#{title}%")}
-  scope :above_the_price, ->(price) { where('price > ?', price) }
+  scope :above_the_price, ->(price) { where('price >= ?', price) }
 
   def self.search(params)
     products = Product.all
