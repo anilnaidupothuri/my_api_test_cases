@@ -36,7 +36,7 @@ RSpec.describe Product, type: :model do
 
     context "serch by price" do 
       it "price lessthan 50000" do 
-        products = 
+        products = Product.above_the_price(50000)
       end 
     end 
 
